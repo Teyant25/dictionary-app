@@ -2,7 +2,7 @@ import logo from "./logo.png";
 import "./App.css";
 import Dictionary from "./Dictionary";
 
-function App() {
+export default function App() {
   return (
     <div className="App">
       <div className="container">
@@ -10,20 +10,18 @@ function App() {
           <img src={logo} className="App-logo img-fluid" alt="logo" />
         </header>
         <main>
-          <Dictionary />
-          <footer className="text-center">
-            <small>
-              {" "}
-              Coded by Tya Kent and is {""}
-              <a href="https://github.com/Teyant25/dictionary-app">
-                open-sourced on GitHub
-              </a>
-            </small>{" "}
-          </footer>
+          <Dictionary defaultKeyword="sunset" />
         </main>
+        <footer className="App-footer">
+          <small>
+            {" "}
+            Coded by Tya Kent and is {""}
+            <a href="https://github.com/Teyant25/dictionary-app">
+              open-sourced on GitHub
+            </a>
+          </small>{" "}
+        </footer>
       </div>
     </div>
   );
 }
-
-export default App;
